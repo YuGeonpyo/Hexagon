@@ -14,7 +14,7 @@ public class Person {
 	   //생성자
 	 
 	
-	public String name = "";
+	1public String name = "";
 	public int age = 0;
 	public int sex = 1;
 	public String address = "";

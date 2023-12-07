@@ -37,6 +37,46 @@ public class Bankaccount {
 	}
 	
 	
+	
+	
+	
+	//override
+	public void monthSalary(int month, String level) {
+		//만약, level이 인사팀 이상인 경우 
+		// 아래를 수정할 수 있음
+		//인사팀 이하(개인의 경우) 콘솔에 error 메세지를 띄우시오
+		if(level.equals("사장") || level.equals("인사")) {
+		int total = this.basesalary + month; // 이달의 급여
+		this.salary = total;
+		System.out.println("수정완료");
+		}
+		
+	    else {
+	    	System.out.println("Error");
+	    }
+	    	
+	}
+	
+	
+	//override
+		public void salaryInfo(String name, Person pio) {
+			// 로그인 이름과 pio의 이름이 같거나 인사팀 이상일 경우
+			// 아래 출력 가능
+			//같지 않다면 error 메세지를 띄우시오
+			if(name.equals(pio.getName())){
+		    	System.out.println("이달의 급여:" + this.salary);
+			}
+			
+		    else {
+		    	System.out.println("Error");
+		    }
+	    	
+		}
+	
+	
+	
+	
+	
 	//이달의 급여 정보 출력
 	public Bankaccount(int basesalary, int salary) {
 		this.basesalary = basesalary;
